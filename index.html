@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Week 2 interactive image gallery assignment">
+  <title>Week 2 | Interactive Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">FRAME<span>.</span></a>
+    <span class="tag">WEEK 2 · HTML / CSS / JAVASCRIPT</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">A LITTLE VISUAL INSPIRATION</p>
+      <h1>Interactive <span>Image Gallery</span></h1>
+      <p>Explore the collection. Select any image to open it in a larger lightbox view.</p>
+    </section>
+
+    <section class="gallery" aria-label="Image gallery">
+      <button class="gallery-item" data-title="Mountain Escape" aria-label="Open Mountain Escape image">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountain peaks under a soft sky" loading="lazy">
+        <span class="caption"><span>01 / NATURE</span><strong>Mountain Escape</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Quiet Coast" aria-label="Open Quiet Coast image">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Ocean waves rolling toward the shore" loading="lazy">
+        <span class="caption"><span>02 / OCEAN</span><strong>Quiet Coast</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Forest Light" aria-label="Open Forest Light image">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85" alt="Sunlight passing through a green forest" loading="lazy">
+        <span class="caption"><span>03 / FOREST</span><strong>Forest Light</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Desert Lines" aria-label="Open Desert Lines image">
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=85" alt="Golden desert dunes" loading="lazy">
+        <span class="caption"><span>04 / DESERT</span><strong>Desert Lines</strong></span>
+      </button>
+      <button class="gallery-item" data-title="City After Dark" aria-label="Open City After Dark image">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85" alt="City skyline glowing at night" loading="lazy">
+        <span class="caption"><span>05 / CITY</span><strong>City After Dark</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Autumn Walk" aria-label="Open Autumn Walk image">
+        <img src="https://images.unsplash.com/photo-1507783548227-544c3b8fc065?auto=format&fit=crop&w=900&q=85" alt="Autumn trees with warm leaves" loading="lazy">
+        <span class="caption"><span>06 / SEASONS</span><strong>Autumn Walk</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Open Road" aria-label="Open Open Road image">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=85" alt="Road leading into a scenic landscape" loading="lazy">
+        <span class="caption"><span>07 / JOURNEY</span><strong>Open Road</strong></span>
+      </button>
+      <button class="gallery-item" data-title="Morning Coffee" aria-label="Open Morning Coffee image">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Coffee cup and a warm morning setting" loading="lazy">
+        <span class="caption"><span>08 / MOMENTS</span><strong>Morning Coffee</strong></span>
+      </button>
+    </section>
+    <p class="hint">TIP: Click an image to enlarge it. Press Esc or click outside the image to close.</p>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image" aria-hidden="true">
+    <button class="close" id="closeLightbox" aria-label="Close image viewer">&times;</button>
+    <button class="arrow previous" id="previousImage" aria-label="Previous image">&#10094;</button>
+    <figure>
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="arrow next" id="nextImage" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <footer><p>WEEK 2 ASSIGNMENT <span>•</span> Built with HTML, CSS &amp; JavaScript</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
